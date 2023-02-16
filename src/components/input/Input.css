@@ -1,0 +1,36 @@
+.input {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 140%;
+    width: 603px;
+    height: 54px;
+    background: #262626;
+    border: 1px solid #0D0D0D;
+    border-radius: 8px;
+    color: #808080;
+    padding: 16px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    width: 125px;
+    height: 54px;
+    background: #1E6F9F;
+    border-radius: 8px;
+    color: #F2F2F2;
+    padding: 20px 14px;
+}
+
+.input img {
+    margin-left: 8px;
+}

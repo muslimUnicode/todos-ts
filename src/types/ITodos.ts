@@ -1,25 +1,8 @@
 export interface ITodos {
-    id: number,
-    name: string,
-    username: string,
-    email: string,
-    address: {
-        street: string,
-        suite: string,
-        city: string,
-        zipcode: string,
-        geo: {
-            lat: string,
-            "lng": string,
-        }
-    }
-    phone: string,
-    website: string,
-    company: {
-        name: string,
-        catchPhrase: string,
-        bs: string,
-    }
+    _id: string,
+    title: string,
+    created_at: number,
+    completed: boolean,
 }
 
 export type todoState = {

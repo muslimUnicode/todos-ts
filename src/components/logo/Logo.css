@@ -1,0 +1,41 @@
+.logo {
+    display: flex;
+    width: 246px;
+    margin: 76px auto 49px;
+    align-items: baseline;
+}
+
+.to {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: #4EA8DE;
+    margin-left: 12px;
+}
+
+.do {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: #5E60CE;
+    margin-right: 9px;
+}
+
+.by {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+    color: #4EA8DE;
+    margin-right: 0.3rem;
+}
+
+.unicode {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5E60CE;
+}
