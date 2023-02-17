@@ -3,7 +3,8 @@
     justify-content: center;
 }
 
-input {
+.input input {
+    margin-right: 8px;
     font-family: 'Inter';
     font-size: 16px;
     line-height: 140%;
@@ -16,7 +17,7 @@ input {
     padding: 16px;
 }
 
-button {
+.button {
     display: flex;
     align-items: center;
     font-family: 'Inter';
@@ -29,6 +30,7 @@ button {
     border-radius: 8px;
     color: #F2F2F2;
     padding: 20px 14px;
+    cursor: pointer;
 }
 
 .input img {
