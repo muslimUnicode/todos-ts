@@ -2,9 +2,10 @@ import "./Input.css"
 import plus from "../../assets/button-plus.svg"
 import { useState } from "react"
 import { postTodos } from "../../store/reducers/user/todoAction"
-import { useAppDispatch } from "../../hooks/hooks"
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks"
 
 const Input = () => {
+    const { todos, isLoading, loadingAddTodo, loadingDeleteTodo } = useAppSelector(state => state.todos)
     const [value, setValue] = useState("")
     const dispatch = useAppDispatch()
 
@@ -16,7 +17,7 @@ const Input = () => {
     return(
         <div className="input">
             <input value={value} onChange={e => setValue(e.target.value)} type="text" placeholder="Что вы планируете сделать?"/>
-            <div onClick={() => addTodo(value)} className="button">Добавить<img src={plus} alt="" /></div>
+            <div onClick={() => addTodo(value)} className="button">Добавить{loadingAddTodo ? <div className="load"></div> :<img src={plus} alt="" />}</div>
         </div>
     )
 }

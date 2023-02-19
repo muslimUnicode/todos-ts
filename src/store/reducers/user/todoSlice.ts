@@ -5,6 +5,8 @@ import { deleteTodos, getTodos, postTodos, updateTodos } from "./todoAction";
 const initialState: todoState = {
     todos: [],
     isLoading: false,
+    loadingAddTodo: false,
+    loadingDeleteTodo: "",
 }
 
 export const todoSlice = createSlice({
@@ -20,18 +22,18 @@ export const todoSlice = createSlice({
             state.todos = action.payload
         });
         builder.addCase(postTodos.pending, (state) => {
-            state.isLoading = true
+            state.loadingAddTodo = true
         });
         builder.addCase(postTodos.fulfilled, (state, action: PayloadAction<ITodos>) => {
-            state.isLoading = false
             state.todos.push(action.payload)
+            state.loadingAddTodo = false
         })
-        builder.addCase(deleteTodos.pending, (state) => {
-            state.isLoading = true
+        builder.addCase(deleteTodos.pending, (state, action) => {
+            state.loadingDeleteTodo = action.meta.arg
         });
         builder.addCase(deleteTodos.fulfilled, (state, action: PayloadAction<string>) => {
-            state.isLoading = false
             state.todos = state.todos.filter(todo => todo._id !== action.payload)
+            state.loadingDeleteTodo = ""
         })
         builder.addCase(updateTodos.pending, (state) => {
             state.isLoading = true
