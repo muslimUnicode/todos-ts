@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './App.css';
-import { useAppDispatch, useAppSelector } from './hooks/hooks';
+import { useAppDispatch } from './hooks/hooks';
 import { getTodos } from './store/reducers/user/todoAction';
 import Logo from './components/logo/Logo';
 import Input from './components/input/Input';

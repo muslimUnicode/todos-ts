@@ -18,8 +18,8 @@ export const todoSlice = createSlice({
             state.isLoading = true
         });
         builder.addCase(getTodos.fulfilled, (state, action: PayloadAction<ITodos[]>) => {
-            state.isLoading = false
             state.todos = action.payload
+            state.isLoading = false
         });
         builder.addCase(postTodos.pending, (state) => {
             state.loadingAddTodo = true
@@ -39,8 +39,8 @@ export const todoSlice = createSlice({
             state.isLoading = true
         });
         builder.addCase(updateTodos.fulfilled, (state, action: PayloadAction<ITodos>) => {
-            state.isLoading = false
             state.todos = state.todos.map(todo => todo._id === action.payload._id ? action.payload : todo)
+            state.isLoading = false
         })
     },
 });

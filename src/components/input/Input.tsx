@@ -5,7 +5,7 @@ import { postTodos } from "../../store/reducers/user/todoAction"
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks"
 
 const Input = () => {
-    const { todos, isLoading, loadingAddTodo, loadingDeleteTodo } = useAppSelector(state => state.todos)
+    const { loadingAddTodo } = useAppSelector(state => state.todos)
     const [value, setValue] = useState("")
     const dispatch = useAppDispatch()
 
